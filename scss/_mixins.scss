@@ -1,0 +1,57 @@
+@mixin trans {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+@mixin shadowreset {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+@mixin radius($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+@mixin circle($radius, $size) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    width: $size;
+    height: $size;
+    line-height: $size;
+    text-align: center;
+}
+
+@mixin place($color) {
+    &.placeholder { color: $color; }
+    &:-moz-placeholder { color: $color; }
+    &::-moz-placeholder { color: $color; }
+    &:-ms-input-placeholder { color: $color; }
+    &::-webkit-input-placeholder { color: $color; }
+    
+}
+@mixin truncate($truncation-boundary) {
+    max-width: $truncation-boundary; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@mixin fa(){
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+}

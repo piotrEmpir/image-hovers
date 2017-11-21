@@ -1,0 +1,524 @@
+/*
+Theme Name: Default
+Description: Default - side slide menu
+Version: 1.0
+
+*/
+/**************************/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background: #fff;
+  font-family: "Open Sans";
+  color: #555;
+  padding-top: 30px; }
+
+::-moz-selection {
+  color: #fff;
+  background: #CB0023; }
+
+::selection {
+  color: #fff;
+  background: #CB0023; }
+
+@media screen and (max-width: 480px) {
+  .col-xxs-12 {
+    width: 100%; } }
+
+a {
+  color: #CB0023;
+  /*&:visited{
+        color: darken($link-color, 20);
+    }*/ }
+  a:hover {
+    color: #98001a; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.card {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden; }
+  .card img {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    z-index: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  .card .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-transform: scale(0) translateY(0);
+    -ms-transform: scale(0) translateY(0);
+    transform: scale(0) translateY(0);
+    opacity: 0; }
+    .card .overlay:after, .card .overlay:before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      border: 1px solid #fff;
+      border-width: 2px 0 0 2px;
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -ms-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out; }
+    .card .overlay:before {
+      top: auto;
+      left: auto;
+      right: 50%;
+      bottom: 50%;
+      border-width: 0 2px 2px 0; }
+  .card:hover img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+  .card:hover .overlay {
+    -webkit-transform: scale(1) translateY(0);
+    -ms-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+    opacity: 1; }
+    .card:hover .overlay:after {
+      top: 10px;
+      left: 10px;
+      width: 30px;
+      height: 30px; }
+    .card:hover .overlay:before {
+      width: 30px;
+      height: 30px;
+      right: 10px;
+      bottom: 10px; }
+
+.card2 {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden; }
+  .card2 img {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    z-index: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  .card2 .title {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    z-index: 20;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    text-shadow: 1px 1px 4px #000; }
+  .card2 .date {
+    position: absolute;
+    left: 0px;
+    bottom: 20px;
+    right: 10px;
+    height: 20px;
+    overflow: hidden;
+    z-index: 20;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+    .card2 .date span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -ms-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      -webkit-transform: translateX(-200px);
+      -ms-transform: translateX(-200px);
+      transform: translateX(-200px); }
+  .card2 .overlay {
+    background: rgba(255, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%); }
+  .card2:hover img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+  .card2:hover .overlay {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); }
+  .card2:hover .title {
+    bottom: 50px; }
+  .card2:hover .date {
+    height: 20px;
+    bottom: 20px; }
+    .card2:hover .date span {
+      -webkit-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+      transform: translateX(20px); }
+
+/********************************/
+.card3 {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden; }
+  .card3 img {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    z-index: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  .card3 .overlay,
+  .card3 .overlay2 {
+    background: rgba(0, 0, 255, 0.2);
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    width: 90%;
+    height: 90%;
+    z-index: 2;
+    top: 5%;
+    left: 5%;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-transform: scale(1) translateX(-60%) translateY(0%);
+    -ms-transform: scale(1) translateX(-60%) translateY(0%);
+    transform: scale(1) translateX(-60%) translateY(0%);
+    opacity: 0; }
+  .card3 .overlay2 {
+    background: rgba(255, 0, 0, 0.2);
+    -webkit-transform: scale(1) translateX(60%) translateY(0%);
+    -ms-transform: scale(1) translateX(60%) translateY(0%);
+    transform: scale(1) translateX(60%) translateY(0%);
+    top: auto;
+    left: auto;
+    right: 5%;
+    bottom: 5%; }
+  .card3 .title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 20;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+  .card3:hover img {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9); }
+  .card3:hover .overlay,
+  .card3:hover .overlay2 {
+    -webkit-transform: scale(1) translateX(0) translateY(0);
+    -ms-transform: scale(1) translateX(0) translateY(0);
+    transform: scale(1) translateX(0) translateY(0);
+    opacity: 1; }
+  .card3:hover .title {
+    opacity: 1; }
+
+/********************************/
+.card4 {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden; }
+  .card4 img {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    z-index: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  .card4 .overlay,
+  .card4 .overlay2 {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    width: 200%;
+    height: 200%;
+    z-index: 2;
+    top: -25%;
+    left: -5%;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-transform: scale(1) translateX(0) translateY(0) rotate(90deg);
+    -ms-transform: scale(1) translateX(0) translateY(0) rotate(90deg);
+    transform: scale(1) translateX(0) translateY(0) rotate(90deg);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0; }
+  .card4 .overlay2 {
+    background: rgba(0, 0, 0, 0.4);
+    top: 125%;
+    left: 105%;
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(1) translateX(0) translateY(0) rotate(-90deg);
+    -ms-transform: scale(1) translateX(0) translateY(0) rotate(-90deg);
+    transform: scale(1) translateX(0) translateY(0) rotate(-90deg); }
+  .card4 .title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 20;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+  .card4:hover img {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2); }
+  .card4:hover .overlay {
+    -webkit-transform: scale(1) translateX(0) translateY(0) rotate(45deg);
+    -ms-transform: scale(1) translateX(0) translateY(0) rotate(45deg);
+    transform: scale(1) translateX(0) translateY(0) rotate(45deg);
+    opacity: 1; }
+  .card4:hover .overlay2 {
+    -webkit-transform: scale(1) translateX(0) translateY(0) rotate(-135deg);
+    -ms-transform: scale(1) translateX(0) translateY(0) rotate(-135deg);
+    transform: scale(1) translateX(0) translateY(0) rotate(-135deg); }
+  .card4:hover .title {
+    opacity: 1; }
+
+/********************************/
+.card5 {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden; }
+  .card5 img {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    z-index: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  .card5 .overlay,
+  .card5 .overlay2 {
+    background: rgba(0, 0, 0, 0.2);
+    background: #fff;
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-transform: skewx(0) translatex(100%);
+    -ms-transform: skewx(0) translatex(100%);
+    transform: skewx(0) translatex(100%);
+    transition: all 0.4s ease-in-out; }
+  .card5 .overlay2 {
+    background: white;
+    background: #fff;
+    background-size: cover;
+    -webkit-transition: all 0.5s ease-in-out 0.1s;
+    -o-transition: all 0.5s ease-in-out 0.1s;
+    transition: all 0.5s ease-in-out 0.1s;
+    -webkit-transform: skewx(0deg) translatex(100%);
+    -ms-transform: skewx(0deg) translatex(100%);
+    transform: skewx(0deg) translatex(100%); }
+  .card5 .title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 20;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+  .card5:hover img {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  .card5:hover .overlay {
+    -webkit-transform: skewx(-15deg) translatex(60%);
+    -ms-transform: skewx(-15deg) translatex(60%);
+    transform: skewx(-15deg) translatex(60%);
+    -webkit-transform: skewx(25deg) translatex(80%);
+    -ms-transform: skewx(25deg) translatex(80%);
+    transform: skewx(25deg) translatex(80%);
+    opacity: 0.1; }
+  .card5:hover .overlay2 {
+    -webkit-transform: skewx(15deg) translatex(90%);
+    -ms-transform: skewx(15deg) translatex(90%);
+    transform: skewx(15deg) translatex(90%);
+    opacity: 0.7; }
+  .card5:hover .title {
+    opacity: 1; }

@@ -1,0 +1,39 @@
+$color-primary: #CB0023;
+$color-primary2: #000; 
+
+$font: 'Open Sans'; 
+
+$text-color: #555;
+$link-color: $color-primary;
+
+$footer-text: #fff;
+$footer-link: #fff;
+$footer-bg: #3C3F41;
+
+$bottom-area-text: #fff;
+$bottom-area-link: #fff;
+$bottom-area-bg: #000;
+
+$screen-xxs: 320px;
+$screen-xxs-min: $screen-xxs;
+
+$screen-xs: 481px;
+$screen-xs-min: $screen-xs;
+$screen-phone: $screen-xs-min;
+
+$screen-sm: 769px;
+$screen-sm-min: $screen-sm;
+
+
+$screen-md: 992px;
+$screen-md-min: $screen-md;
+
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+
+
+$screen-xxs-max: ($screen-xs-min - 1);
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+

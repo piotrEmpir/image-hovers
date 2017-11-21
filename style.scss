@@ -1,0 +1,402 @@
+/*
+Theme Name: Default
+Description: Default - side slide menu
+Version: 1.0
+
+*/
+
+@import "scss/variables"; 
+@import "scss/mixins";
+
+/**************************/
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    background: #fff;
+    font-family: $font;
+    color: $text-color;
+    padding-top: 30px;
+} 
+
+::-moz-selection{color:#fff;background:$color-primary;}
+::selection{color:#fff;background:$color-primary;}
+
+.col-xxs-12{
+    @media screen and (max-width: $screen-xxs-max){
+        width: 100%;
+    }
+}
+a {
+    color: $link-color;
+    &:hover {
+        color: darken($link-color, 10);
+    }
+    /*&:visited{
+        color: darken($link-color, 20);
+    }*/
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.card{
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    img{
+        @include trans;
+        position: relative;
+        z-index: 1;
+        transform: scale(1);
+    }
+    .overlay{
+        background: rgba(0,0,0,0.5);
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        @include trans;
+        transform: scale(0) translateY(0) ;
+        opacity: 0;
+        &:after,
+        &:before{
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            border: 1px solid #fff;
+            border-width: 2px 0 0 2px;
+            @include trans;
+        }
+        &:before{
+            top: auto;
+            left: auto;
+            right: 50%;
+            bottom: 50%; 
+            border-width: 0 2px 2px 0;
+            
+        }   
+    }
+    
+    &:hover{
+        img{
+            transform: scale(1.1);
+        }
+        .overlay{
+            transform: scale(1) translateY(0);
+            opacity: 1;
+            
+            &:after{
+                top: 10px;
+                left: 10px;
+                width: 30px;
+                height: 30px;
+
+            }
+            &:before{
+                width: 30px;
+                height: 30px;
+                right: 10px;
+                bottom: 10px; 
+            }
+        }
+    }
+}
+
+.card2{
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    img{
+        @include trans;
+        position: relative;
+        z-index: 1;
+        transform: scale(1);
+    }
+        
+    .title{
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        z-index: 20;
+        @include trans;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        @include trans;
+        text-shadow: 1px 1px 4px #000;
+    }
+    .date{
+        position: absolute;
+        left: 0px;
+        bottom: 20px;
+        right: 10px;
+        height: 20px;
+        overflow: hidden;
+        z-index: 20;
+        @include trans;
+        color: #fff;
+        font-size: 16px;
+        line-height: 20px;
+        @include trans;
+        span{
+            position: absolute;
+            left: 0;
+            top: 0;
+            @include trans;
+            transform: translateX(-200px);
+        }
+    }
+
+    .overlay{
+        background: rgba(255,0,0,0.5);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        @include trans;
+        transform: translateY(100%) ;
+        
+    }
+    
+    &:hover{
+        img{
+            transform: scale(1.1);
+        }
+        .overlay{
+            transform: translateY(0);
+        }
+        .title{
+            bottom: 50px;
+        }
+        .date{
+            height: 20px;
+            bottom: 20px;
+            span{
+                transform: translateX(20px);
+            }
+        }
+    }
+}
+
+/********************************/
+
+.card3{
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    img{
+        @include trans;
+        position: relative;
+        z-index: 1;
+        transform: scale(1);
+    }
+    .overlay,
+    .overlay2{
+        background: rgba(0,0,255,0.2);
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        width: 90%;
+        height: 90%;
+        z-index: 2;
+        top: 5%;
+        left: 5%;
+        @include trans;
+        transform: scale(1) translateX(-60%) translateY(00%) ;
+        opacity: 0;  
+    }
+    .overlay2{
+        background: rgba(255,0,0,0.2);
+        transform: scale(1) translateX(60%) translateY(00%) ;
+        top: auto;
+        left: auto;
+        right: 5%;
+        bottom: 5%;
+    }
+    .title{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        z-index: 20;
+        @include trans;
+    }
+    
+    &:hover{
+        img{
+            transform: scale(0.9);
+        }
+        .overlay,
+        .overlay2{
+            transform: scale(1) translateX(0) translateY(0);
+            opacity: 1;
+        }
+        .title{
+            opacity: 1;
+        }
+    }
+}
+
+
+
+/********************************/
+
+.card4{
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    img{
+        @include trans;
+        position: relative;
+        z-index: 1;
+        transform: scale(1);
+    }
+    .overlay,
+    .overlay2{
+        background: rgba(0,0,0,0.4);
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        width: 200%;
+        height: 200%;
+        z-index: 2;
+        top: -25%;
+        left: -5%;
+        @include trans;
+        transform: scale(1) translateX(0) translateY(0) rotate(90deg) ;
+        transform-origin: 0 0;
+    }
+    .overlay2{
+        background: rgba(0,0,0,0.4);
+        top: 125%;
+        left: 105%;
+        transform-origin: 0 0;
+        transform: scale(1) translateX(0) translateY(0) rotate(-90deg) ;
+    }
+    .title{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        z-index: 20;
+        @include trans;
+    }
+    
+    &:hover{
+        img{
+            transform: scale(1.2);
+        }
+        .overlay{
+            transform: scale(1) translateX(0) translateY(0) rotate(45deg);
+            opacity: 1;
+        }
+        
+        .overlay2{
+            transform: scale(1) translateX(0) translateY(0) rotate(-135deg);
+        }
+        .title{
+            opacity: 1;
+        }
+    }
+}
+
+/********************************/
+
+.card5{
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    img{
+        @include trans;
+        position: relative;
+        z-index: 1;
+        transform: scale(1);
+    }
+    .overlay,
+    .overlay2{
+        background: rgba(0,0,0,0.2);
+        background: #fff;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        @include trans;
+        transform: skewx(0) translatex(100%);
+        
+        transition: all 0.4s ease-in-out;
+    }
+    .overlay2{
+        background: rgba(255,255,255,1);
+        background: #fff;
+        background-size: cover;
+        transition: all 0.5s ease-in-out 0.1s;
+        transform: skewx(0deg) translatex(100%);
+    }
+    .title{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        z-index: 20;
+        @include trans;
+    }
+    
+    &:hover{
+        img{
+            transform: scale(1);
+        }
+        .overlay{
+            transform: skewx(-15deg) translatex(60%);
+            transform: skewx(25deg) translatex(80%);
+            opacity: 0.1;
+            
+        }
+        .overlay2{
+            transform: skewx(15deg) translatex(90%);
+            opacity: 0.7;
+        }
+        .title{
+            opacity: 1;
+        }
+    }
+}
